@@ -580,8 +580,14 @@ ol {
   background-color: var(--blue-light-color);
   padding: 8px 0;
 }
+.header__top--bg {
+  background-color: var(--blue-color);
+}
 .header__bottom {
   background-color: transparent;
+}
+.header__bottom--bg {
+  background-color: var(--blue-dark-color);
 }
 
 ._header._header-sticky {
@@ -749,6 +755,7 @@ ol {
 .nav__list--dropdown {
   position: absolute;
   background-color: var(--light-color);
+  line-height: 120%;
   right: 50%;
   top: 100%;
   -webkit-transform: translateX(50%);
@@ -778,7 +785,7 @@ ol {
 }
 @media (any-hover: hover) {
   .nav__list--dropdown a:hover {
-    color: var(--accent-color);
+    color: var(--second-color);
   }
 }
 .nav__list--dropdown h2 {
@@ -818,6 +825,13 @@ ol {
 .nav__link {
   color: var(--light-color);
   font-size: 16px;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .nav__link:hover {
+    color: var(--accent-color);
+  }
 }
 .nav__link--drop::after {
   content: "";
@@ -845,8 +859,6 @@ ol {
   -webkit-box-align: initial;
   -ms-flex-align: initial;
   align-items: initial;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   right: 0;
   width: 100%;
   -webkit-transform: translateX(0);
@@ -857,10 +869,9 @@ ol {
   transform: translateY(-20px);
 }
 .dropdown-submenu__item {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 33.333%;
-  flex: 0 0 33.333%;
-  min-width: 200px;
+  -webkit-box-flex: 25%;
+  -ms-flex: 25%;
+  flex: 25%;
   padding: 0 30px;
 }
 .dropdown-submenu__item:first-child {
@@ -871,6 +882,10 @@ ol {
 }
 .dropdown-submenu__list {
   padding: 0;
+}
+.dropdown-submenu__list-item--link a {
+  color: var(--accent-color) !important;
+  font-style: italic;
 }
 
 .mobile-back {
@@ -1320,6 +1335,10 @@ input[type=checkbox] {
 ._p100 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+._pt140 {
+  padding-top: 140px;
 }
 
 ._mb40 {
@@ -2238,7 +2257,7 @@ button {
     margin-bottom: 195px;
   }
 }
-.steps-section__desc::after {
+.steps-section__desc--img::after {
   position: absolute;
   content: "";
   top: 0;
@@ -2248,7 +2267,7 @@ button {
   background: url("../img/decor/prava250.webp") 0 0/contain no-repeat;
 }
 @media (max-width: 1120px) {
-  .steps-section__desc::after {
+  .steps-section__desc--img::after {
     top: 100%;
     right: 50%;
     -webkit-transform: translateX(50%);
@@ -2462,6 +2481,28 @@ button {
   .questions__accordion {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+.questions__accordion.questions__accordion--page {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 90%;
+  flex: 0 0 90%;
+  width: 90%;
+  max-width: 90%;
+  padding-right: 0px;
+  margin: 0 auto 100px;
+  background-color: var(--grey-color-bg);
+  border-radius: 44px;
+  padding: 60px 150px;
+}
+@media (max-width: 830px) {
+  .questions__accordion.questions__accordion--page {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 40px;
   }
 }
 @media (max-width: 830px) {
@@ -2743,6 +2784,14 @@ button {
   display: flex;
   position: relative;
 }
+@media (max-width: 830px) {
+  .online-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 .online-section__container {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 55%;
@@ -2763,6 +2812,17 @@ button {
   position: relative;
   overflow: visible;
   z-index: 3;
+}
+@media (max-width: 830px) {
+  .online-section__container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px var(--container-offset);
+    max-width: var(--container-width);
+  }
 }
 .online-section__container h2 span {
   display: inline-block;
@@ -2806,12 +2866,20 @@ button {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 45%;
   flex: 0 0 45%;
-  width: 45%;
   position: relative;
   overflow: hidden;
   border: 0;
   width: 100%;
   z-index: 0;
+}
+@media (max-width: 830px) {
+  .poster {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    bottom: -5px;
+  }
 }
 .poster img {
   height: 100%;
@@ -2821,6 +2889,11 @@ button {
   bottom: 0;
   left: 0;
   height: 100%;
+}
+@media (max-width: 830px) {
+  .poster .triangle {
+    display: none;
+  }
 }
 .poster .triangle path {
   fill: var(--accent-color);

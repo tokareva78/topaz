@@ -58,14 +58,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
-/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
-/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_functions_burger__WEBPACK_IMPORTED_MODULE_1__);
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
 
-console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)());
+// console.log(mobileCheck())
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -83,7 +81,7 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 // import './functions/fix-fullheight';
 
 // Реализация бургер-меню
-
+// import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
@@ -428,8 +426,6 @@ menu.addEventListener('click', e => {
     scrollTop();
   }
   if (e.target.classList.contains('nav__link') && !e.target.classList.contains('nav__link--drop')) {
-    // e.preventDefault();
-    console.log("Click event fired!");
     menu.classList.remove('open');
     overlay.classList.remove('open');
     unlockScroll();
@@ -922,123 +918,6 @@ if (document.getElementById('tariffTemplate')) {
 
   // ========================================
 }
-
-/***/ }),
-
-/***/ "./src/js/functions/burger.js":
-/*!************************************!*\
-  !*** ./src/js/functions/burger.js ***!
-  \************************************/
-/***/ (() => {
-
-// import { disableScroll } from '../functions/disable-scroll';
-// import { enableScroll } from '../functions/enable-scroll';
-
-// (function(){
-//   const burger = document?.querySelector('[data-burger]');
-//   const menu = document?.querySelector('[data-menu]');
-//   const menuItems = document?.querySelectorAll('[data-menu-item]');
-//   // const overlay = document?.querySelector('[data-menu-overlay]');
-//   const closeBtn = document?.querySelector('[data-menu-close]');
-
-//   burger?.addEventListener('click', (e) => {
-//     burger?.classList.toggle('burger--active');
-//     menu?.classList.toggle('menu--active');
-//     // overlay?.classList.toggle('overlay--active');
-
-//     if (menu?.classList.contains('menu--active')) {
-//       burger?.setAttribute('aria-expanded', 'true');
-//       burger?.setAttribute('aria-label', 'Закрыть меню');
-//       disableScroll();
-//     } else {
-//       burger?.setAttribute('aria-expanded', 'false');
-//       burger?.setAttribute('aria-label', 'Открыть меню');
-//       enableScroll();
-//     }
-//   });
-
-//   closeBtn?.addEventListener('click', () => {
-//     burger?.setAttribute('aria-expanded', 'false');
-//     burger?.setAttribute('aria-label', 'Открыть меню');
-//     burger.classList.remove('burger--active');
-//     menu.classList.remove('menu--active');
-//     // overlay.classList.remove('overlay--active');
-//     enableScroll();
-//   });
-
-//   overlay?.addEventListener('click', () => {
-//     burger?.setAttribute('aria-expanded', 'false');
-//     burger?.setAttribute('aria-label', 'Открыть меню');
-//     burger.classList.remove('burger--active');
-//     menu.classList.remove('menu--active');
-//     // overlay.classList.remove('overlay--active');
-//     enableScroll();
-//   });
-
-//   menuItems?.forEach(el => {
-//     el.addEventListener('click', () => {
-//       burger?.setAttribute('aria-expanded', 'false');
-//       burger?.setAttribute('aria-label', 'Открыть меню');
-//       burger.classList.remove('burger--active');
-//       menu.classList.remove('menu--active');
-//       // overlay.classList.remove('overlay--active');
-//       enableScroll();
-//     });
-//   });
-// })();
-
-const menu = document.querySelector('.nav'),
-  burger = document.querySelector('.burger'),
-  mobileBack = document.querySelector('.mobile-back'),
-  overlay = document.querySelector('.overlay');
-const lockScroll = () => {
-  document.body.classList.add('lock');
-};
-const unlockScroll = () => {
-  document.body.classList.remove('lock');
-};
-const initialMenu = () => {
-  document.querySelector('.nav__list--dropdown').classList.remove('transformation');
-  document.querySelector('.nav').querySelector('.nav__list').classList.remove('transformation');
-  scrollTop();
-};
-const scrollTop = () => {
-  menu.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-};
-burger.addEventListener('click', () => {
-  menu.classList.add('open');
-  overlay.classList.add('open');
-  lockScroll();
-  initialMenu();
-});
-overlay.addEventListener('click', () => {
-  menu.classList.remove('open');
-  overlay.classList.remove('open');
-  unlockScroll();
-});
-menu.addEventListener('click', e => {
-  if (e.target.classList.contains('nav__link--drop')) {
-    e.preventDefault();
-    e.target.closest('.nav__list').classList.add('transformation');
-    e.target.closest('.nav__item').querySelector('.nav__list--dropdown').classList.add('transformation');
-    scrollTop();
-  }
-  if (e.target.classList.contains('mobile-back__link')) {
-    e.preventDefault();
-    e.target.closest('.nav__list--dropdown').classList.remove('transformation');
-    e.target.closest('.nav').querySelector('.nav__list').classList.remove('transformation');
-    scrollTop();
-  }
-  if (e.target.classList.contains('nav__link') && !e.target.classList.contains('nav__link--drop')) {
-    e.preventDefault();
-    menu.classList.remove('open');
-    overlay.classList.remove('open');
-    unlockScroll();
-  }
-});
 
 /***/ }),
 
