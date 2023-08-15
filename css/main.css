@@ -2836,6 +2836,12 @@ button {
   gap: 20px;
   margin-bottom: 40px;
 }
+@media (max-width: 576px) {
+  .online-section__container ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
 .online-section__container ul li {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
