@@ -196,10 +196,8 @@
 
     <main class="main _pt140">
 
-      <section class="tariffs-section _p60" id=""price>
-
-  <div class="tariffs-section__container container">
-
+      <section class="schedule main__schedule _p60">
+  <div class="schedule__container container">
     <ol class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
       <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item"
           href="/"><span itemprop="name">Главная</span></a>
@@ -207,180 +205,48 @@
       </li>
 
       <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item"
-          href="#"><span itemprop="name">Программы</span></a>
+          href="#"><span itemprop="name">Автошкола</span></a>
         <meta itemprop="position" content="2">
       </li>
-      <li>Стоимость</li>
+      <li>Расписание</li>
     </ol>
-
-    <h1 class="title title--h2 _mb60">Стоимость обучения <span>в Автошколе</span></h1>
-    <div class="tariffs">
-      <div class="tabs tariffs__tabs">
-        <div class="tabs__nav tariffs__nav">
-          <button class="tabs__nav-btn tabs__nav-btn--auto" type="button" data-tab="#category_b">«B»</button>
-          <button class="tabs__nav-btn tabs__nav-btn--moto" type="button" data-tab="#category_a">«А»</button>
-          <button class="tabs__nav-btn tabs__nav-btn--auto-moto" type="button" data-tab="#category_ab">«А» + «B»</button>
-          <button class="tabs__nav-btn tabs__nav-btn--ind" type="button" data-tab="#individually">Дополнительно</button>
+    <div class="schedule__content">
+      <div class="schedule__title">
+        <h1 class="title title--h2 _m0">Расписание занятий в автошколе</h1>
+      </div>
+      <div class="schedule__text">
+        <div class="schedule__desc">
+          <p>В автошколе <span class="underline">«Топаз»</span> вы можете выбрать время, в которое Вам будет удобнее всего проходить
+            обучение.</p>
+          <p>Занятия в нашей автошколе легко <b>совмещать с работой, учебой и другими важными делами</b>.</p>
         </div>
-        <div class="tabs__content tariffs__content">
-          <div class="tabs__item tariffs__item" id="category_b">
-            <section data-tariff="section1">
-              <h2>Получите водительское удостоверение на <span class="tooltip"
-                  data-tooltip="Вождение на автомобиле">категорию «B»</span>, пройдя обучение с максимальным комфортом
-              </h2>
-              <div id="tariffContainersection1" class="tariffs__section"></div>
-            </section>
-          </div>
-          <div class="tabs__item tariffs__item" id="category_a">
-            <section data-tariff="section2">
-              <h2><span class="tooltip" data-tooltip="Вождение на мотоцикле">Категория «А»</span> даёт право ездить на
-                всех типах мотоциклов.</h2>
-              <div id="tariffContainersection2" class="tariffs__section"></div>
-            </section>
-          </div>
-          <div class="tabs__item tariffs__item" id="category_ab">
-            <section data-tariff="section3">
-              <h2>Максимальная эффективность на дороге с нашим комбинированным тарифом! Одновременное обучение на <span
-                  class="tooltip" data-tooltip="Вождение на автомобиле и мотоцикле">категории «B» и «А»</span> —
-                уникальный тариф для экономия времени и достижения новых горизонтов мобильности!</h2>
-              <div id="tariffContainersection3" class="tariffs__section"></div>
-            </section>
-          </div>
-          <div class="tabs__item tariffs__item" id="individually">
-            <section data-tariff="section4">
-              <h2>Наши опытные инструкторы сделают обучение максимально эффективным и комфортным. Независимо от вашего
-                уровня навыков вождения, мы разработаем персональную программу, с учетом ваших потребностей и
-                особенностей.</h2>
-              <div id="tariffContainersection4" class="tariffs__section"></div>
-            </section>
-          </div>
+        <div class="schedule__desc schedule__desc--record">
+          <p><b>Обратите внимание</b>, что запись на обучение: с понедельника по четверг с 10.00 до 19.00 и в пятницу с 10:00 до 17:00 по адресу <b>Верхняя Первомайская, 14</b>.</p>
+
+          <p>Определите удобную для вас группу: <b>вечернюю</b> или <b>утреннюю выходного дня</b>. А так же теорию ПДД возможно проходить в <b>онлайн формате</b>.</p>
+        </div>
+
+        <div class="schedule__items" data-flex="2">
+          <div class="schedule__item schedule__item--moon">
+            <h3>Понедельник–Среда</h3><span>с 19.00 до 22.00</span><button
+              class="btn btn--tby _btn" type="button" data-modal-target="modal"
+              aria-label="Предварительная запись в группу «Понедельник-Среда»">Выбрать группу</button></div>
+          <div class="schedule__item schedule__item--moon">
+            <h3>Вторник–Четверг</h3><span>с 19.00 до 22.00</span><button
+              class="btn btn--tby _btn" type="button" data-modal-target="modal"
+              aria-label="Предварительная запись в группу «Вторник-Четверг»">Выбрать группу</button></div>
+          <div class="schedule__item schedule__item--sun">
+            <h3>Суббота</h3><span>с 11.00 до 14.00</span><button
+              class="btn btn--tby _btn" type="button" data-modal-target="modal"
+              aria-label="Предварительная запись в группу «Суббота»">Выбрать группу</button></div>
+          <div class="schedule__item schedule__item--online">
+            <h3>Онлайн-обучение</h3><span>в любое время</span><button
+                  class="btn btn--tby _btn" type="button" data-modal-target="modal"
+                  aria-label="Предварительная запись в группу «ПДД онлайн»">Выбрать группу</button></div>
         </div>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- Шаблон тарифов -->
-<template id="tariffTemplate">
-  <div class="tariff-card shadow">
-    <h3 class="tariff-card__name" data-like=""></h3>
-    <div class="tariff-card__descr"></div>
-    <ul class="tariff-card__time">
-      <li class="tariff-card__time-driving"></li>
-      <li class="tariff-card__time-theory"></li>
-    </ul>
-    <div class="tariff-card__description"></div>
-    <ul class="tariff-card__price">
-      <li class="tariff-card__price-mkpp"></li>
-      <li class="tariff-card__price-akpp"></li>
-    </ul>
-    <button type="button" class="btn btn--yb btn--ybi btn-tariff _btn" data-modal-target="modalTariff"
-      aria-label="">Записаться</button>
-    <ul class="tariff-card__footer">
-      <li class="tariff-card__installment"></li>
-      <li class="tariff-card__contribution"></li>
-    </ul>
-  </div>
-</template>
-<!-- Шаблон тарифов -->
-
-      <section class="free-lesson main__free-lesson section-bg section-bg--img">
-  <div class="section-bg__container container">
-    <div class="section-bg__content">
-      <h2 class="title title--y title--h2">Бесплатное занятие в автошколе</h2>
-      <p>Более 100 000 учеников успешно сдали экзамен благодаря нашей автошколе! Попробуйте и вы!</p>
-      <p>Чтобы убедиться, что автошкола <span class="underline">«Топаз»</span> подходит вам, посетите бесплатное занятие для новых учеников.</p>
-    </div>
-    <div class="section-bg__btn">
-      <button class="btn btn--yb _btn" type="button" data-modal-target="modal" aria-label="Записаться на бесплатный урок">Получить урок бесплатно</button>
-    </div>
-  </div>
-</section>
-
-      <section class="blocks-sections main__blocks-sections _p60">
-  <div class="blocks-sections__container container">
-    <div class="blocks">
-      <!-- <div class="blocks__title">
-        <h2 class="title title--h2 title--line">Что входит в <span>стоимость</span></h2>
-        <h3>Мы рады предложить вам полный пакет обучения вождению, который включает все необходимое! У нас нет скрытых
-        дополнительных платежей — все расходы уже включены в стоимость.</h3>
-      </div> -->
-
-      <div class="blocks__title">
-        <h2 class="title title--h2 title--center">Что входит в <span>стоимость</span></h2>
-        <div class="steps-section__desc desc desc--center">
-          <p>Мы рады предложить вам полный пакет обучения вождению, который включает все необходимое! У нас нет скрытых
-            дополнительных платежей — все расходы уже включены в стоимость.</p>
-        </div>
-      </div>
-
-      <div class="blocks__items" data-flex="3">
-
-        <div class="blocks__item">
-          <div class="blocks__img"><img src="img/svg/blocks/1.svg" alt="" width="80" height="80"></div>
-          <h3>Персональный менеджер</h3>
-          <p>Мы стремимся к тому, чтобы ваше обучение было не только полезным, но и комфортным. Вы всегда можете
-            рассчитывать на доброжелательное и профессиональное отношение нашего администратора. Он поможет вам
-            разобраться в материалах, подготовиться к экзаменам в ГИБДД и ответит на все ваши вопросы.</p>
-        </div>
-
-        <div class="blocks__item">
-          <div class="blocks__img"><img src="img/svg/blocks/2.svg" alt="" width="80" height="80"></div>
-          <h3>Полный курс теории</h3>
-          <p>Теоретическая часть обучения является фундаментом успешного становления водителя. Мы предоставляем полный
-            объем теории (134 часа) независимо от того, какую программу вы выбираете. Вы можете быть уверены, что
-            получите всю необходимую информацию и знания, чтобы успешно сдать теоретический экзамен. </p>
-          <!-- Учебный материал актуальный и соответствующий действующим или планируемым к введению правилам. -->
-        </div>
-
-        <div class="blocks__item">
-          <div class="blocks__img"><img src="img/svg/blocks/3.svg" alt="" width="80" height="80"></div>
-          <h3>Учебная литература</h3>
-          <p>Для студентов в очных группах мы предоставляем бесплатно учебные материалы, а студентам, которые
-            предпочитают обучение онлайн — доступ
-            к цифровым ресурсам, включая интерактивные уроки, видеоуроки и другие обучающие материалы, которые помогут
-            вам усвоить
-            теоретическую базу в удобное для вас время.</p>
-          <!--  Ваше обучение с нами будет максимально эффективным и интересным! -->
-        </div>
-
-        <div class="blocks__item">
-          <div class="blocks__img"><img src="img/svg/blocks/4.svg" alt="" width="80" height="80"></div>
-          <h3>ГСМ и бензин</h3>
-          <p>Мы предоставим вам автомобиль, чтобы вы могли учиться в удобной и безопасной обстановке. На каждом занятии
-            вы будете
-            иметь персонального опытного инструктора, который поможет вам развивать навыки вождения и уверенность на
-            дороге. Расходы
-            на топливо также уже включены в общую стоимость. Вы можете сосредотачиваться на уроках, не беспокоясь о
-            дополнительных
-            затратах.</p>
-        </div>
-
-        <div class="blocks__item">
-          <div class="blocks__img"><img src="img/svg/blocks/5.svg" alt="" width="80" height="80"></div>
-          <h3>Документы для ГИБДД</h3>
-          <p>Мы с радостью поможем вам подготовить все необходимые документы для успешной сдачи экзаменов в ГИБДД. Наша
-            команда
-            готова провести вас через всю процедуру подачи документов и прохождения экзаменов. Начните свой путь к
-            водительским
-            правам прямо сейчас с нашей поддержкой и профессионализмом!</p>
-        </div>
-
-        <div class="blocks__item">
-          <div class="blocks__img"><img src="img/svg/blocks/6.svg" alt="" width="80" height="80"></div>
-          <h3>Занятия по вождению на площадке и в городе</h3>
-          <p>На автодроме вы получите практические навыки управления автомобилем, выполняя различные маневры и
-            упражнения, которые помогут вам научиться уверенно управлять автомобилем и преодолевать различные ситуации
-            на дороге. А чтобы вы могли применить полученные навыки в реальных условиях, мы выбираем для вождения в
-            городе оптимальные
-            маршруты, соответствующие вашему уровню умений.</p>
-          <!-- Это позволяет вам постепенно привыкнуть к дорожной обстановке, освоить
-            навыки вождения в различных ситуациях и улучшить вашу реакцию на дороге. -->
-        </div>
-
-      </div>
-    </div>
   </div>
 </section>
 
