@@ -428,11 +428,11 @@ menu.addEventListener('click', e => {
     scrollTop();
   }
   if (e.target.classList.contains('nav__link') && !e.target.classList.contains('nav__link--drop')) {
-    e.preventDefault();
-    // console.log("Click event fired!");
+    // e.preventDefault();
+    console.log("Click event fired!");
     menu.classList.remove('open');
     overlay.classList.remove('open');
-    // unlockScroll();
+    unlockScroll();
   }
 });
 
